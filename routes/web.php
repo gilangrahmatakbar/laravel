@@ -34,3 +34,17 @@ Route::get('/register', 'AuthController@register');
 Route::get('/welcome1', 'AuthController@welcome1');
 
 Route::post('/welcome1', 'AuthController@welcome11');
+
+Route::get('/pertanyaan', 'PertanyaanController@index');
+
+Route::get('/pertanyaan/create', 'PertanyaanController@create');
+
+Route::get('/pertanyaan/{pertanyaan_id}', 'PertanyaanController@show');
+
+Route::post('/pertanyaan', 'PertanyaanController@store');
+
+Route::delete('/pertanyaan/{pertanyaan_id}', 'PertanyaanController@destroy');
+
+Route::get('/pertanyaan/{pertanyaan_id}/edit', 'PertanyaanController@edit');
+
+Route::put('/pertanyaan/{pertanyaan_id}', 'PertanyaanController@update');
